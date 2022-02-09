@@ -1,0 +1,1 @@
+This project uses github actions to deploy the built website to github pages.
