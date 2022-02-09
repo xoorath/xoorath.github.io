@@ -1,0 +1,7 @@
+{variable:color_bg=#fff}
+{variable:color_text=#222}
+
+body {
+    background-color: {$color_bg};
+    color: {$color_text};
+}

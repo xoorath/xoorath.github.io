@@ -1,0 +1,4 @@
+site_title=Electrostatic Discharge Project Template
+site_description=Electrostatic Discharge Project Template
+
+site_homepage=https://github.com/xoorath/esd
