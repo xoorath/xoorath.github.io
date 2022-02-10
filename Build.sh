@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ "$(uname)" == "Darwin" ]; then
-    ESD/MacOS/esd
+    esd/macos/esd "$@"
 else
-    ESD/Linux/esd
+    esd/linux/esd "$@"
 fi
