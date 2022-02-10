@@ -4,4 +4,25 @@
 body {
     background-color: {$color_bg};
     color: {$color_text};
+    padding: 30px;
+}
+
+#footer {
+    display: inline-block;
+}
+
+#page {
+    max-width:666px;
+}
+
+a:before {
+    content:'{';
+}
+
+a:after {
+    content:'}';
+}
+
+a[href^="http://"]:not([href*="{$site_homepage}"]):after, a[href^="https://"]:not([href*="{$site_homepage}"]):after  {
+  content: '↗️}';
 }

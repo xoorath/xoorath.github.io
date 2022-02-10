@@ -1,1 +1,1 @@
-console.log('Hello World: {$site_title}')
+console.log(`Hello World: {$site_title}`);

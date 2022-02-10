@@ -1,4 +1,6 @@
-site_title=Electrostatic Discharge Project Template
-site_description=Electrostatic Discharge Project Template
+site_title=Xoorath's Hut
+site_description=The thoughts, projects and notes of Jared Thomson.
 
-site_homepage=https://github.com/xoorath/esd
+
+site_homepage=xoorath.github.io
+site_homepage_full=https://xoorath.github.io
