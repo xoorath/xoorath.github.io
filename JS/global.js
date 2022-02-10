@@ -1,1 +1,1 @@
-console.log('Hello World: Electrostatic Discharge Project Template')
+console.log(`Hello World: Xoorath's Hut`);

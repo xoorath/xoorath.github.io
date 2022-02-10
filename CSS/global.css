@@ -4,4 +4,25 @@
 body {
     background-color: #fff;
     color: #222;
+    padding: 30px;
+}
+
+#footer {
+    display: inline-block;
+}
+
+#page {
+    max-width:666px;
+}
+
+a:before {
+    content:'{';
+}
+
+a:after {
+    content:'}';
+}
+
+a[href^="http://"]:not([href*="xoorath.github.io"]):after, a[href^="https://"]:not([href*="xoorath.github.io"]):after  {
+  content: '↗️}';
 }
