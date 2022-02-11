@@ -42,7 +42,7 @@ pre {
 }
 
 ul {
-    list-style: square url(../Graphics/Bullet.svg) inside;
+    list-style: square url(../Graphics/bullet.svg) inside;
 }
 
 blockquote {
