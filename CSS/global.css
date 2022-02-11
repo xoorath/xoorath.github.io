@@ -94,7 +94,7 @@ blockquote cite::before {
     font-family: 'Unlucky', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 96pt;
     margin-top: -0.2em;
-    color: hsl(208, 50%, 91%);
+    color: #ffe;
     display: block;
     text-transform: lowercase;
 }
@@ -112,7 +112,7 @@ blockquote cite::before {
 }
 
 #nav h1, #nav h2, #nav h3, #nav subtitle {
-    color: hsl(208, 50%, 91%);
+    color: #ffe;
     margin: 0 0 0 0;
 }
 
@@ -147,25 +147,21 @@ a:not(#nav h1 a) {
 }
 
 #nav h1 a {
-  color:hsl(208, 50%, 91%);
+  color:#ffe;
 }
 
 a {
     text-decoration: none;
 }
 
-a:not(.out, #nav h1 a) {
+a:not(#nav h1 a) {
   text-decoration: underline dotted;
   text-decoration-color: #D95DB8;
 }
 
 
-a.out:before {
-    content:'{';
-}
-
 a.out:after {
-    content:'}';
+    content:' ^';
 }
 
 a.out:before, a.out:after {
