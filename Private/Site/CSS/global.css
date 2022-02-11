@@ -1,4 +1,5 @@
 {include:CSS/Unlucky.css}
+{include:CSS/SourceSerif4.css}
 {include:CSS/Cascadia.css}
 
 body {
@@ -7,29 +8,56 @@ body {
     padding: {$style_standard_pad} 0 {$style_standard_pad} {$style_standard_pad};
     font-family: 'Roboto', sans-serif;
     
-    background: repeating-linear-gradient(12deg, {$color_bg} 0px, {$color_bg} 50px, {$color_bg2} 50px, {$color_bg2} 100px);
+    background: repeating-linear-gradient(45deg, {$color_bg1} 0px, {$color_bg1} {$color_bg_stripe1}, {$color_bg2} {$color_bg_stripe1}, {$color_bg2} {$color_bg_stripe2}), repeating-linear-gradient(-45deg, {$color_bg1} 0px, {$color_bg1} {$color_bg_stripe1}, {$color_bg2} {$color_bg_stripe1}, {$color_bg2} {$color_bg_stripe2}) ;
+    background-blend-mode: overlay;
 
     height: 100vh;
-
 }
 
-h1, h2, h3 {
-    font-family: serif;
-    margin: 0 0 0 0;
+h1, h2, h3, subtitle {
+    font-family: 'Source Serif' ,serif;
+    margin: 0 0 0 -0.5em;
 }
 
-#nav h1, #nav h2, #nav h3 {
-    color: {$color_site_title};
+thead tr td {
+    font-weight: bold;
 }
 
 table.tbl-fit, .tbl-fit th, .tbl-fit td {
-    border: 1px solid {$color_text_em};
+    border: 1px solid {$color_accent_lines};
+}
+
+.tbl-fit td {
+    padding: 0.5em;
+}
+
+u {
+    text-decoration-thickness: 2pt;
+    text-decoration-color: {$color_accent_lines};
 }
 
 pre {
     font-family: 'Cascadia Code' ,'Courier New', Courier, monospace;
-    background-color: darkgreen;
+    
+    background-color: rgb(39, 40, 34, 0.7);
     padding: 1em;
+
+    border: 1.5pt;
+    border-style: solid;
+    border-color: #44453d;
+}
+
+pre .symbol {
+    color:rgb(158, 210, 255);
+}
+
+pre .literal {
+    color: pink;
+}
+
+pre.terminal {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: #464646;
 }
 
 ul {
@@ -40,11 +68,12 @@ blockquote {
     padding: 1em;
     margin-left: 1em;
     border-left: 0.5em solid #999;
-    font-style: italic;
+    font-family: 'Source Serif', serif;
 }
 
 blockquote cite::before {
-    content:'— ';
+    content:'\a— ';
+    white-space: pre;
 }
 
 {include:CSS/Nav.css}

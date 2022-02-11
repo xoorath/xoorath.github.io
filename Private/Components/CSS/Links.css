@@ -1,6 +1,13 @@
+a:not(#nav h1 a) {
+  color:{$color_text};
+}
+
+#nav h1 a {
+  color:{$color_site_title};
+}
+
 a {
     text-decoration: none;
-    color:{$color_text};
 }
 
 a:not(.out, #nav h1 a) {
