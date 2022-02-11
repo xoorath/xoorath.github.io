@@ -1,56 +1,127 @@
+@font-face {
+    font-family: Unlucky;
+    font-weight: bold;
+    src: url(../Fonts/Unlucky-Regular.otf) format("opentype");
+}
+@font-face {
+    font-family: "Cascadia Code";
+    font-style: normal;
+    font-weight: 400;
+    src: url(../Fonts/CascadiaCode.woff2) format("woff2");
+}
+
 body {
-    background-color: #000;
+    background-color: #1e2222;
     color: #ffe;
     padding: 40px 0 40px 40px;
     font-family: 'Roboto', sans-serif;
+    
+    background: repeating-linear-gradient(12deg, #1e2222 0px, #1e2222 50px, #1f1e1e 50px, #1f1e1e 100px);
+
+    height: 100vh;
+
 }
 
 h1, h2, h3 {
     font-family: serif;
-    font-style: italic;
     margin: 0 0 0 0;
 }
 
 #nav h1, #nav h2, #nav h3 {
-    color: #faa;
+    color: aliceblue;
 }
 
 table.tbl-fit, .tbl-fit th, .tbl-fit td {
-    border: 1px solid black;
+    border: 1px solid #dda;
+}
+
+pre {
+    font-family: 'Cascadia Code' ,'Courier New', Courier, monospace;
+    background-color: darkgreen;
+    padding: 1em;
+}
+
+ul {
+    list-style: square url(../Graphics/Bullet.svg) inside;
+}
+
+blockquote {
+    padding: 1em;
+    margin-left: 1em;
+    border-left: 0.5em solid #999;
+    font-style: italic;
+}
+
+blockquote cite::before {
+    content:'— ';
 }
 
 
-#page {
-    max-width:666px;
+#nav h1 {
+    font-family: 'Unlucky', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 96pt;
+    margin-top: -0.2em;
+    color: aliceblue;
+    display: block;
+    text-transform: lowercase;
 }
 
-#page h1, #page h2, #page h3 {
-    color: #afa;
+#nav subtitle {
+    margin-top: 2em;
 }
 
-#footer {
-    width: 100%;
-    padding-top: 40px;
+#nav #title {
     display: inline-block;
 }
 
+#nav #links {
+    display: inline-block;
+}
+#page {
+    max-width:666px;
+    line-height: 1.5;
+}
+
+#page-inner {
+    padding-right: 40px;
+}
+
+#page h1, #page h2, #page h3 {
+    color: seagreen;
+}
+
+#page b, #page i, #page strong, #page em {
+    color: #dda;
+}
+#footer {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom:1em;
+    display: inline-block;
+}
+
+#footer a {
+    padding: 0.5em;
+}
 a {
     text-decoration: none;
     color:#ffe;
 }
 
-a.out:before, a.in:before {
-    font-family: monospace;
-    font-size: 1.5em;
+a:not(.out, #nav h1 a) {
+  text-decoration: underline dotted;
+  text-decoration-color: #dda;
+}
+
+
+a.out:before {
     content:'{';
 }
 
-a.out:after, a.in:after {
-  font-family: monospace;
-  font-size: 1.5em;
+a.out:after {
     content:'}';
 }
 
 a.out:before, a.out:after {
-  color: red;
+  color: #dda;
 }

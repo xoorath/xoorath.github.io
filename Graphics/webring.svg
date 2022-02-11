@@ -1,7 +1,14 @@
-<svg width="80" height="40" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .temp-text { font: italic 40px serif; fill: red; }
-  </style>
-  <text x="0" y="30" class="temp-text">Webring</text>
-  <text x="0" y="60" class="temp-text">placeholder</text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="30px" height="30px" viewBox="0 0 157 141" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:2;">
+	<rect id="webring" x="-0" y="0" width="156.791" height="140.675" style="fill:none;" />
+	<clipPath id="_clip1">
+		<rect x="-0" y="0" width="156.791" height="140.675" />
+	</clipPath>
+	<g clip-path="url(#_clip1)">
+		<path d="M81.248,39.985c27.596,-0 50,22.404 50,50c0,27.596 -22.404,50 -50,50c-27.595,-0 -50,-22.404 -50,-50c0,-27.596 22.405,-50 50,-50Zm0,16c18.765,-0 34,15.235 34,34c0,18.765 -15.235,34 -34,34c-18.765,-0 -34,-15.235 -34,-34c0,-18.765 15.235,-34 34,-34Z" style="fill:#fff;" />
+		<path d="M81.248,131.985l75,-0" style="fill:none;stroke:#fff;stroke-width:16px;" />
+		<path d="M117.621,68.985l-37.5,-64.952" style="fill:none;stroke:#fff;stroke-width:16px;" />
+		<path d="M44.875,68.985l-37.5,64.952" style="fill:none;stroke:#fff;stroke-width:16px;" />
+	</g>
 </svg>
