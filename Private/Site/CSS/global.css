@@ -6,14 +6,15 @@ body {
     background-color: {$color_bg};
     color: {$color_text};
     padding: {$style_standard_pad} 0 {$style_standard_pad} {$style_standard_pad};
+    
     font-family: 'Roboto', sans-serif;
     
     background: repeating-linear-gradient(45deg, {$color_bg1} 0px, {$color_bg1} {$color_bg_stripe1}, {$color_bg2} {$color_bg_stripe1}, {$color_bg2} {$color_bg_stripe2}), repeating-linear-gradient(-45deg, {$color_bg1} 0px, {$color_bg1} {$color_bg_stripe1}, {$color_bg2} {$color_bg_stripe1}, {$color_bg2} {$color_bg_stripe2}) ;
     background-blend-mode: overlay;
-    background-repeat: no-repeat;
 
-    width: 100%;
-    height: 100%;
+    background-position:fixed;
+
+    height: calc(100vh - {$style_standard_pad} - {$style_standard_pad});
 }
 
 h1, h2, h3, subtitle {
