@@ -1,28 +1,25 @@
-{variable:color_bg=#fff}
-{variable:color_text=#222}
-
 body {
     background-color: {$color_bg};
     color: {$color_text};
-    padding: 30px;
+    padding: {$style_standard_pad} 0 {$style_standard_pad} {$style_standard_pad};
+    font-family: 'Roboto', sans-serif;
 }
 
-#footer {
-    display: inline-block;
+h1, h2, h3 {
+    font-family: serif;
+    font-style: italic;
+    margin: 0 0 0 0;
 }
 
-#page {
-    max-width:666px;
+#nav h1, #nav h2, #nav h3 {
+    color: {$color_site_title};
 }
 
-a:before {
-    content:'{';
+table.tbl-fit, .tbl-fit th, .tbl-fit td {
+    border: 1px solid black;
 }
 
-a:after {
-    content:'}';
-}
-
-a[href^="http://"]:not([href*="{$site_homepage}"]):after, a[href^="https://"]:not([href*="{$site_homepage}"]):after  {
-  content: '↗️}';
-}
+{include:CSS/Nav.css}
+{include:CSS/Page.css}
+{include:CSS/Footer.css}
+{include:CSS/Links.css}

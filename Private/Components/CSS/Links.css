@@ -1,0 +1,20 @@
+a {
+    text-decoration: none;
+    color:{$color_text};
+}
+
+a.out:before, a.in:before {
+    font-family: monospace;
+    font-size: 1.5em;
+    content:'{';
+}
+
+a.out:after, a.in:after {
+  font-family: monospace;
+  font-size: 1.5em;
+    content:'}';
+}
+
+a.out:before, a.out:after {
+  color: red;
+}
