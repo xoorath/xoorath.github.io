@@ -1,1 +1,1 @@
-console.log(`Hello World: Xoorath's Hut`);
+console.log(`Hello World: Xoorath's Hovel`);

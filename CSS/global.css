@@ -1,28 +1,56 @@
-
-
-
 body {
-    background-color: #fff;
-    color: #222;
-    padding: 30px;
+    background-color: #000;
+    color: #ffe;
+    padding: 40px 0 40px 40px;
+    font-family: 'Roboto', sans-serif;
 }
 
-#footer {
-    display: inline-block;
+h1, h2, h3 {
+    font-family: serif;
+    font-style: italic;
+    margin: 0 0 0 0;
 }
+
+#nav h1, #nav h2, #nav h3 {
+    color: #faa;
+}
+
+table.tbl-fit, .tbl-fit th, .tbl-fit td {
+    border: 1px solid black;
+}
+
 
 #page {
     max-width:666px;
 }
 
-a:before {
+#page h1, #page h2, #page h3 {
+    color: #afa;
+}
+
+#footer {
+    width: 100%;
+    padding-top: 40px;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color:#ffe;
+}
+
+a.out:before, a.in:before {
+    font-family: monospace;
+    font-size: 1.5em;
     content:'{';
 }
 
-a:after {
+a.out:after, a.in:after {
+  font-family: monospace;
+  font-size: 1.5em;
     content:'}';
 }
 
-a[href^="http://"]:not([href*="xoorath.github.io"]):after, a[href^="https://"]:not([href*="xoorath.github.io"]):after  {
-  content: '↗️}';
+a.out:before, a.out:after {
+  color: red;
 }
