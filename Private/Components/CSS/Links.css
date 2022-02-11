@@ -10,18 +10,14 @@ a {
     text-decoration: none;
 }
 
-a:not(.out, #nav h1 a) {
+a:not(#nav h1 a) {
   text-decoration: underline dotted;
   text-decoration-color: {$color_text_em};
 }
 
 
-a.out:before {
-    content:'{';
-}
-
 a.out:after {
-    content:'}';
+    content:' ^';
 }
 
 a.out:before, a.out:after {

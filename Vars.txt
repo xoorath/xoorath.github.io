@@ -14,7 +14,7 @@ color_bg2=hsl(179, 22%, 20%)
 color_bg_stripe1=8px
 color_bg_stripe2=100px
 
-color_site_title=hsl(208, 50%, 91%)
+color_site_title=#ffe
 color_page_title=seagreen
 color_text=#ffe
 color_text_em=#D95DB8
