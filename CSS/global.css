@@ -19,15 +19,16 @@ body {
     background-color: hsl(130, 14%, 11%);
     color: #ffe;
     padding: 40px 0 40px 40px;
-    
     font-family: 'Roboto', sans-serif;
-    
-    background: repeating-linear-gradient(45deg, hsl(130, 14%, 23%) 0px, hsl(130, 14%, 23%) 8px, hsl(179, 22%, 20%) 8px, hsl(179, 22%, 20%) 100px), repeating-linear-gradient(-45deg, hsl(130, 14%, 23%) 0px, hsl(130, 14%, 23%) 8px, hsl(179, 22%, 20%) 8px, hsl(179, 22%, 20%) 100px) ;
-    background-blend-mode: overlay;
+    height: 100vh;
+}
 
-    background-position:fixed;
-
-    height: calc(100vh - 40px - 40px);
+/* Don't run on ios (blend mode overlay doesn't work with repeating backgrounds on ios) */
+@supports not (-webkit-touch-callout: none) {
+    body {
+        background: repeating-linear-gradient(45deg, hsl(130, 14%, 23%) 0px, hsl(130, 14%, 23%) 8px, hsl(179, 22%, 20%) 8px, hsl(179, 22%, 20%) 100px), repeating-linear-gradient(-45deg, hsl(130, 14%, 23%) 0px, hsl(130, 14%, 23%) 8px, hsl(179, 22%, 20%) 8px, hsl(179, 22%, 20%) 100px) ;
+        background-blend-mode: overlay;
+    }
 }
 
 h1, h2, h3, subtitle {
