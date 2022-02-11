@@ -3,18 +3,20 @@ a {
     color:{$color_text};
 }
 
-a.out:before, a.in:before {
-    font-family: monospace;
-    font-size: 1.5em;
+a:not(.out, #nav h1 a) {
+  text-decoration: underline dotted;
+  text-decoration-color: {$color_text_em};
+}
+
+
+a.out:before {
     content:'{';
 }
 
-a.out:after, a.in:after {
-  font-family: monospace;
-  font-size: 1.5em;
+a.out:after {
     content:'}';
 }
 
 a.out:before, a.out:after {
-  color: red;
+  color: {$color_text_em};
 }

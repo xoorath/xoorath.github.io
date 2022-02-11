@@ -1,0 +1,21 @@
+
+#nav h1 {
+    font-family: 'Unlucky', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 96pt;
+    margin-top: -0.2em;
+    color: {$color_site_title};
+    display: block;
+    text-transform: lowercase;
+}
+
+#nav subtitle {
+    margin-top: 2em;
+}
+
+#nav #title {
+    display: inline-block;
+}
+
+#nav #links {
+    display: inline-block;
+}

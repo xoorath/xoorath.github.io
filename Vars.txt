@@ -1,15 +1,17 @@
-site_title=Xoorath's Hovel
-site_description=The thoughts, projects and notes of Jared Thomson.
+site_title=Xoorath
+site_description=Projects, thoughts and notes by Jared.
 
 
 site_homepage=xoorath.github.io
 site_homepage_full=https://xoorath.github.io
 
 
-color_bg=#000
-color_site_title=#faa
-color_page_title=#afa
+color_bg=#1e2222
+color_bg2=#1f1e1e
+color_site_title=aliceblue
+color_page_title=seagreen
 color_text=#ffe
+color_text_em=#dda
 
 style_standard_pad=40px
 style_page_width=666px

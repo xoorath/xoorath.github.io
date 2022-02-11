@@ -1,13 +1,20 @@
+{include:CSS/Unlucky.css}
+{include:CSS/Cascadia.css}
+
 body {
     background-color: {$color_bg};
     color: {$color_text};
     padding: {$style_standard_pad} 0 {$style_standard_pad} {$style_standard_pad};
     font-family: 'Roboto', sans-serif;
+    
+    background: repeating-linear-gradient(12deg, {$color_bg} 0px, {$color_bg} 50px, {$color_bg2} 50px, {$color_bg2} 100px);
+
+    height: 100vh;
+
 }
 
 h1, h2, h3 {
     font-family: serif;
-    font-style: italic;
     margin: 0 0 0 0;
 }
 
@@ -16,7 +23,28 @@ h1, h2, h3 {
 }
 
 table.tbl-fit, .tbl-fit th, .tbl-fit td {
-    border: 1px solid black;
+    border: 1px solid {$color_text_em};
+}
+
+pre {
+    font-family: 'Cascadia Code' ,'Courier New', Courier, monospace;
+    background-color: darkgreen;
+    padding: 1em;
+}
+
+ul {
+    list-style: square url(../Graphics/Bullet.svg) inside;
+}
+
+blockquote {
+    padding: 1em;
+    margin-left: 1em;
+    border-left: 0.5em solid #999;
+    font-style: italic;
+}
+
+blockquote cite::before {
+    content:'— ';
 }
 
 {include:CSS/Nav.css}
