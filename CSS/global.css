@@ -4,6 +4,11 @@
     src: url(../Fonts/Unlucky-Regular.otf) format("opentype");
 }
 @font-face {
+    font-family: Source Serif;
+    font-weight: normal;
+    src: url(../Fonts/SourceSerif4-Regular.ttf.woff) format("woff");
+}
+@font-face {
     font-family: "Cascadia Code";
     font-style: normal;
     font-weight: 400;
@@ -11,34 +16,61 @@
 }
 
 body {
-    background-color: #1e2222;
+    background-color: hsl(130, 14%, 11%);
     color: #ffe;
     padding: 40px 0 40px 40px;
     font-family: 'Roboto', sans-serif;
     
-    background: repeating-linear-gradient(12deg, #1e2222 0px, #1e2222 50px, #1f1e1e 50px, #1f1e1e 100px);
+    background: repeating-linear-gradient(45deg, hsl(130, 14%, 23%) 0px, hsl(130, 14%, 23%) 8px, hsl(179, 22%, 20%) 8px, hsl(179, 22%, 20%) 100px), repeating-linear-gradient(-45deg, hsl(130, 14%, 23%) 0px, hsl(130, 14%, 23%) 8px, hsl(179, 22%, 20%) 8px, hsl(179, 22%, 20%) 100px) ;
+    background-blend-mode: overlay;
 
     height: 100vh;
-
 }
 
-h1, h2, h3 {
-    font-family: serif;
-    margin: 0 0 0 0;
+h1, h2, h3, subtitle {
+    font-family: 'Source Serif' ,serif;
+    margin: 0 0 0 -0.5em;
 }
 
-#nav h1, #nav h2, #nav h3 {
-    color: aliceblue;
+thead tr td {
+    font-weight: bold;
 }
 
 table.tbl-fit, .tbl-fit th, .tbl-fit td {
-    border: 1px solid #dda;
+    border: 1px solid #2A5E45;
+}
+
+.tbl-fit td {
+    padding: 0.5em;
+}
+
+u {
+    text-decoration-thickness: 2pt;
+    text-decoration-color: #2A5E45;
 }
 
 pre {
     font-family: 'Cascadia Code' ,'Courier New', Courier, monospace;
-    background-color: darkgreen;
+    
+    background-color: rgb(39, 40, 34, 0.7);
     padding: 1em;
+
+    border: 1.5pt;
+    border-style: solid;
+    border-color: #44453d;
+}
+
+pre .symbol {
+    color:rgb(158, 210, 255);
+}
+
+pre .literal {
+    color: pink;
+}
+
+pre.terminal {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: #464646;
 }
 
 ul {
@@ -49,19 +81,20 @@ blockquote {
     padding: 1em;
     margin-left: 1em;
     border-left: 0.5em solid #999;
-    font-style: italic;
+    font-family: 'Source Serif', serif;
 }
 
 blockquote cite::before {
-    content:'— ';
+    content:'\a— ';
+    white-space: pre;
 }
 
 
-#nav h1 {
+#nav h1 a {
     font-family: 'Unlucky', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 96pt;
     margin-top: -0.2em;
-    color: aliceblue;
+    color: hsl(208, 50%, 91%);
     display: block;
     text-transform: lowercase;
 }
@@ -77,6 +110,12 @@ blockquote cite::before {
 #nav #links {
     display: inline-block;
 }
+
+#nav h1, #nav h2, #nav h3, #nav subtitle {
+    color: hsl(208, 50%, 91%);
+    margin: 0 0 0 0;
+}
+
 #page {
     max-width:666px;
     line-height: 1.5;
@@ -91,7 +130,7 @@ blockquote cite::before {
 }
 
 #page b, #page i, #page strong, #page em {
-    color: #dda;
+    color: #D95DB8;
 }
 #footer {
     width: 100%;
@@ -103,14 +142,21 @@ blockquote cite::before {
 #footer a {
     padding: 0.5em;
 }
+a:not(#nav h1 a) {
+  color:#ffe;
+}
+
+#nav h1 a {
+  color:hsl(208, 50%, 91%);
+}
+
 a {
     text-decoration: none;
-    color:#ffe;
 }
 
 a:not(.out, #nav h1 a) {
   text-decoration: underline dotted;
-  text-decoration-color: #dda;
+  text-decoration-color: #D95DB8;
 }
 
 
@@ -123,5 +169,5 @@ a.out:after {
 }
 
 a.out:before, a.out:after {
-  color: #dda;
+  color: #D95DB8;
 }
