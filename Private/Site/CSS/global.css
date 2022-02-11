@@ -10,6 +10,7 @@ body {
     
     background: repeating-linear-gradient(45deg, {$color_bg1} 0px, {$color_bg1} {$color_bg_stripe1}, {$color_bg2} {$color_bg_stripe1}, {$color_bg2} {$color_bg_stripe2}), repeating-linear-gradient(-45deg, {$color_bg1} 0px, {$color_bg1} {$color_bg_stripe1}, {$color_bg2} {$color_bg_stripe1}, {$color_bg2} {$color_bg_stripe2}) ;
     background-blend-mode: overlay;
+    background-repeat: no-repeat;
 
     height: 100vh;
 }
