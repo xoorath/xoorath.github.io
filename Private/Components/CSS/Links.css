@@ -11,7 +11,7 @@ a {
 }
 
 a:not(#nav h1 a) {
-  text-decoration: underline dotted;
+  text-decoration-line: underline dotted;
   text-decoration-color: {$color_text_em};
 }
 
