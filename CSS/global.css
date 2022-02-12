@@ -169,7 +169,7 @@ a {
 }
 
 a/*:not(#nav h1 a)*/ {
-  decoration-line: underline dotted;
+  text-decoration: underline dotted;
   text-decoration-color: #D95DB8;
 }
 
