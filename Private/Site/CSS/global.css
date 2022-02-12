@@ -4,19 +4,23 @@
 
 body {
     background-color: {$color_bg};
+    background-image: url('../Graphics/bg.svg');
     color: {$color_text};
     padding: {$style_standard_pad} 0 {$style_standard_pad} {$style_standard_pad};
     font-family: 'Roboto', sans-serif;
     height: 100vh;
+    
 }
 
 /* Don't run on ios (blend mode overlay doesn't work with repeating backgrounds on ios) */
+/*
 @supports not (-webkit-touch-callout: none) {
     body {
         background: repeating-linear-gradient(45deg, {$color_bg1} 0px, {$color_bg1} {$color_bg_stripe1}, {$color_bg2} {$color_bg_stripe1}, {$color_bg2} {$color_bg_stripe2}), repeating-linear-gradient(-45deg, {$color_bg1} 0px, {$color_bg1} {$color_bg_stripe1}, {$color_bg2} {$color_bg_stripe1}, {$color_bg2} {$color_bg_stripe2}) ;
         background-blend-mode: overlay;
     }
 }
+*/
 
 h1, h2, h3, subtitle {
     font-family: 'Source Serif' ,serif;
