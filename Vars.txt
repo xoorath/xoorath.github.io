@@ -1,7 +1,6 @@
 site_title=Xoorath
 site_description=Projects, thoughts and notes by Jared.
 
-
 site_homepage=xoorath.github.io
 site_homepage_full=https://xoorath.github.io
 
