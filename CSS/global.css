@@ -14,30 +14,49 @@
     font-weight: 400;
     src: url(../Fonts/CascadiaCode.woff2) format("woff2");
 }
+@font-face {
+    font-family: Passageway;
+    font-weight: normal;
+    src: url(../Fonts/Passageway-8qzz.otf) format("opentype");
+}
+
+html {
+    filter: brightness(85%);
+
+    /*background-color: #303030;*/
+    background: 
+    linear-gradient(
+          to right, 
+          #38383A 0px, /* Starting point */
+          #38383A calc(50% - (800px / 2) - 5em), /* End black point */
+          #303030 calc(50% - (800px / 2)), /* Starting red point */
+          #303030 calc(50% + (800px / 2)), /* End red point */
+          #38383A calc(50% + (800px / 2) + 5em), /* Starting black point */
+          #38383A 100% /* End black point */
+        );
+}
 
 body {
-    background-color: hsl(130, 14%, 11%);
-    background-image: url('../Graphics/bg.svg');
-    color: #ffe;
-    padding: 40px 0 40px 40px;
+    
+    color: #F4F3F3;
+    padding: 40px 40px 40px 40px;
     font-family: 'Roboto', sans-serif;
     height: 100vh;
-    
+    margin: auto;
+    max-width:800px;
 }
-
-/* Don't run on ios (blend mode overlay doesn't work with repeating backgrounds on ios) */
-/*
-@supports not (-webkit-touch-callout: none) {
-    body {
-        background: repeating-linear-gradient(45deg, hsl(130, 14%, 23%) 0px, hsl(130, 14%, 23%) 8px, hsl(179, 22%, 20%) 8px, hsl(179, 22%, 20%) 100px), repeating-linear-gradient(-45deg, hsl(130, 14%, 23%) 0px, hsl(130, 14%, 23%) 8px, hsl(179, 22%, 20%) 8px, hsl(179, 22%, 20%) 100px) ;
-        background-blend-mode: overlay;
-    }
-}
-*/
 
 h1, h2, h3, subtitle {
-    font-family: 'Source Serif' ,serif;
+    /*font-family: 'Source Serif', serif;*/
     margin: 0 0 0 0;
+}
+
+subtitle {
+    /*
+        Very slightly larger than default
+        This is to prevent fuzzy lettering on horizontal lines on firefox
+    */
+    font-size: 12.5pt;
 }
 
 thead tr td {
@@ -45,7 +64,7 @@ thead tr td {
 }
 
 table.tbl-fit, .tbl-fit th, .tbl-fit td {
-    border: 1px solid #2A5E45;
+    border: 1px solid #B48266;
 }
 
 .tbl-fit td {
@@ -54,7 +73,7 @@ table.tbl-fit, .tbl-fit th, .tbl-fit td {
 
 u {
     text-decoration-thickness: 2pt;
-    text-decoration-color: #2A5E45;
+    text-decoration-color: #B48266;
 }
 
 pre {
@@ -99,12 +118,41 @@ blockquote cite::before {
     white-space: pre;
 }
 
+date {
+    display: inline-block;
+    padding: 0.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    background-color: #464646;
+    color: #F4F3F3;
+    border-radius: 5px;
+    margin: 1em;
+    margin-left: 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    background-color: #F4F3F3;
+    color: #303030;
+    border-radius: 5px;
+    margin: 1em;
+    margin-left: 0;
+}
+
+.breathing-room {
+    margin-top: 1.0em;
+    margin-bottom: 1.0em;
+}
+
 
 #nav h1 a {
-    font-family: 'Unlucky', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 96pt;
+    font-family: 'Passageway', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50pt;
     margin-top: -0.2em;
-    color: #ffe;
+    color: #D2D0FF;
     display: block;
     text-transform: lowercase;
 }
@@ -122,25 +170,28 @@ blockquote cite::before {
 }
 
 #nav h1, #nav h2, #nav h3, #nav subtitle {
-    color: #ffe;
+    color: #D2D0FF;
     margin: 0 0 0 0;
 }
 
 #page {
-    max-width:666px;
+    /*
+    Centering and content width are currently controlled by the body tag
+    margin: auto;
+    max-width:800px;
+    */
     line-height: 1.5;
 }
 
 #page-inner {
-    padding-right: 40px;
 }
 
 #page h1, #page h2, #page h3 {
-    color: seagreen;
+    color: #D2D0FF;
 }
 
 #page b, #page i, #page strong, #page em {
-    color: #D95DB8;
+    color: #F4F3F3;
 }
 #footer {
     width: 100%;
@@ -157,11 +208,16 @@ blockquote cite::before {
     padding-top: 0.5em;
 }
 a:not(#nav h1 a) {
-  color:#ffe;
+  color:#F4F3F3;
 }
 
 #nav h1 a {
-  color:#ffe;
+  color:#D2D0FF;
+  text-decoration: none;
+}
+
+.btn a {
+  text-decoration: none;
 }
 
 a {
@@ -170,7 +226,7 @@ a {
 
 a/*:not(#nav h1 a)*/ {
   text-decoration: underline dotted;
-  text-decoration-color: #D95DB8;
+  text-decoration-color: #F4F3F3;
 }
 
 
@@ -179,5 +235,90 @@ a.out:after {
 }
 
 a.out:before, a.out:after {
-  color: #D95DB8;
+  color: #F4F3F3;
 }
+
+
+img {
+    /* The standard pad adds a reasonable margin */
+    max-width: 100%;
+}
+
+.poster {
+    width: 100%;
+}
+
+img.wider {
+    max-width: 110%;
+    margin-left: -5%;
+    margin-right: -5%;
+}
+
+.gallery {
+    width: 112%;
+    margin-left: -6%;
+    font-size: 0;
+}
+
+.gallery .entry {
+    display: inline-table;
+    max-width: calc(50% - 1em);
+    font-size: 1rem;
+    padding: 0.5em;
+    object-fit: cover;
+}
+
+.gallery .entry img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.gallery .entry img.maintain-aspect {
+    height: 100%;
+    object-fit: scale-down;
+}
+
+img.maintain-aspect {
+    height: 100%;
+    object-fit: scale-down;
+}
+
+.modal {
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+
+    z-index:999;
+    visibility: hidden;
+    pointer-events: none;
+
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 100% !important;
+    object-fit: scale-down !important;
+}
+
+.modal:target {
+    visibility: visible;
+    pointer-events: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(1px);
+}
+
+.attention {
+    font-weight: bold;
+    color: #A19DFF !important;
+}
+
+a.attention:before, a.attention:after {
+    font-weight: bold;
+    color: #A19DFF !important;
+}
+  
