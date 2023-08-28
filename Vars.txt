@@ -4,24 +4,24 @@ site_description=Projects, thoughts and notes by Jared.
 site_homepage=xoorath.github.io
 site_homepage_full=https://xoorath.github.io
 
-# color_bg is just used as the background when the gradient fails.
-color_bg=hsl(130, 14%, 11%)
-# HSL to make it easier to modify colors relative to each other.
-color_bg1=hsl(130, 14%, 23%)
-color_bg2=hsl(179, 22%, 20%)
+color_bg=#303030
+color_bg_outside=#38383A
+style_bg_gradient_distance=5em
 
-color_bg_stripe1=8px
-color_bg_stripe2=100px
-
-color_site_title=#ffe
-color_page_title=seagreen
-color_text=#ffe
-color_text_em=#D95DB8
+color_site_title=#D2D0FF
+color_page_title=#D2D0FF
+color_text=#F4F3F3
+color_text_em=#F4F3F3
 
 # Underlined text (not links) and table borders
-color_accent_lines=#2A5E45
+color_accent_lines=#B48266
+
+# Color used when manually drawing attention to an element with the class "attention"
+color_attention=#A19DFF
 
 style_standard_pad=40px
-style_page_width=666px
+style_page_width=800px
 
-path_to_root=./
+# Page links
+link_page_contact=contact.html
+link_post_esd=Posts/ESD.html

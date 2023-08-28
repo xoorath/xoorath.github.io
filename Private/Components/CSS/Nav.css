@@ -1,7 +1,7 @@
 
 #nav h1 a {
-    font-family: 'Unlucky', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 96pt;
+    font-family: 'Passageway', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50pt;
     margin-top: -0.2em;
     color: {$color_site_title};
     display: block;

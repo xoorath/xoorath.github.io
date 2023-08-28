@@ -1,0 +1,73 @@
+
+img {
+    /* The standard pad adds a reasonable margin */
+    max-width: 100%;
+}
+
+.poster {
+    width: 100%;
+}
+
+img.wider {
+    max-width: 110%;
+    margin-left: -5%;
+    margin-right: -5%;
+}
+
+.gallery {
+    width: 112%;
+    margin-left: -6%;
+    font-size: 0;
+}
+
+.gallery .entry {
+    display: inline-table;
+    max-width: calc(50% - 1em);
+    font-size: 1rem;
+    padding: 0.5em;
+    object-fit: cover;
+}
+
+.gallery .entry img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.gallery .entry img.maintain-aspect {
+    height: 100%;
+    object-fit: scale-down;
+}
+
+img.maintain-aspect {
+    height: 100%;
+    object-fit: scale-down;
+}
+
+.modal {
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+
+    z-index:999;
+    visibility: hidden;
+    pointer-events: none;
+
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 100% !important;
+    object-fit: scale-down !important;
+}
+
+.modal:target {
+    visibility: visible;
+    pointer-events: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(1px);
+}

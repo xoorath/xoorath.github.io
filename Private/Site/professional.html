@@ -8,21 +8,14 @@
         {include:Nav.html}
         {include:ContentBefore.html}
             <h1>Professional</h1>
-            <subtitle>Professional Projects & Career Portfolio.</subtitle>
+            <p>
+                Below you can find information on some of the more interesting jobs I've held.
+            </p>
+            <p>
+                Enjoy looking around and feel free to <a href="{$page_depth}/{$link_page_contact}">reach out</a> with any questions.
+            </p>
 
-            <h2>Jobs</h2>
-            <ol>
-                <li><a class="in" href="./Jobs/xbox.html">Xbox Game Studios</a> - Senior Software Engineer</li>
-                <li><a class="in" href="./Jobs/snowedin.html">Snowed In Studios</a> - Technical Director</li>
-                <li><a class="in" href="./Jobs/ubisoft.html">Ubisoft Montreal</a> - Generalist Programmer</li>
-                <li><a class="in" href="./Jobs/magmic.html">Magmic Games</a> - Programmer</li>
-                <li><a class="in" href="./Jobs/qnx.html">QNX Software Systems</a> - Programmer</li>
-            </ol>
-
-            <blockquote>
-                “The cat’s A.I. was realistic, right down to the total lack of loyalty.”
-                <cite>Dennis E. Taylor, For We Are Many</cite>
-            </blockquote>
+            {include:Jobs/ListJobs.html}
 
         {include:ContentAfter.html}
         {include:FooterGlobal.html}

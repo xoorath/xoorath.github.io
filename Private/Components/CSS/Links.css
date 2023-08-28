@@ -4,6 +4,11 @@ a:not(#nav h1 a) {
 
 #nav h1 a {
   color:{$color_site_title};
+  text-decoration: none;
+}
+
+.btn a {
+  text-decoration: none;
 }
 
 a {

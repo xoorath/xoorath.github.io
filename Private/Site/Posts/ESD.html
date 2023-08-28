@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    {variable:page_depth=..}
+    <head>
+        {include:HeadGlobal.html}
+    </head>
+    <body>
+        {include:Nav.html}
+        {include:ContentBefore.html}
+            <h1>Electrostatic Discharge ⚡</h1>
+            <div class="breathing-room">
+                <a href="https://github.com/xoorath/esd"><img src="./ESD/github_badge.svg"></img></a>
+                <a href="https://www.tldrlegal.com/license/creative-commons-attribution-4-0-international-cc-by-4"><img src="./ESD/License CC BY-4.0.svg"></img></a>
+            </div>
+            <img src="./ESD/Example.png"/>
+            <p>Electrostatic Discharge (esd) is here to take the pain out of making static websites. It's a minimal templating tool for html, css and javascript.
+            Unlike alternative options it takes seconds to learn and runs faster than you can type <code>esd</code>.</p>
+            
+            <h2>Features</h2>
+            <p>
+                There are only 3 features.
+            </p>
+            <p>
+                Your website defined in <code>/Private/Site/*</code> is transformed with these three features and output into <code>/Public/*.</code>
+            </p>
+            <ol>
+                <li>Files may be included from <code>/Private/Components/*</code> with <code>{</code><code>include:file_name}</code></li>
+                <li>Variables can be declared in a global <code>./Vars.txt</code> or in any source file with <code>{</code><code>variable:variable_name=example}</code>.</li>
+                <li>Variables can be substituted with <code>{</code><code>$variable_name}</code>.</li>
+            </ol>
+            <h2>Docs</h2>
+            <p>
+                See the <a class ="out" href="https://github.com/xoorath/esd/blob/main/Docs/Readme.md">docs page on GitHub</a> to learn more about building and using esd.
+            </p>
+            <h2>License</h2>
+            <p>
+                See the <a class ="out" href="https://github.com/xoorath/esd/blob/main/LICENSE.md">LICENSE file on GitHub</a>.
+            </p>
+
+        {include:ContentAfter.html}
+        {include:FooterGlobal.html}
+    </body>
+</html>
