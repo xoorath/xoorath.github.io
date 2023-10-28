@@ -25,3 +25,4 @@ style_page_width=800px
 # Page links
 link_page_contact=contact.html
 link_post_esd=Posts/ESD.html
+link_post_cheesecake=Posts/cheesecake.html
