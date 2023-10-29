@@ -3,5 +3,8 @@
         ".github": true,
         ".vscode": true,
         "Public/": true
+    },
+    "search.exclude": {
+        "public/**": true
     }
 }
