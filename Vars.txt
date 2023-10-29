@@ -4,21 +4,6 @@ site_description=Projects, thoughts and notes by Jared.
 site_homepage=xoorath.github.io
 site_homepage_full=https://xoorath.github.io
 
-color_bg=#303030
-color_bg_outside=#38383A
-style_bg_gradient_distance=5em
-
-color_site_title=#D2D0FF
-color_page_title=#D2D0FF
-color_text=#F4F3F3
-color_text_em=#F4F3F3
-
-# Underlined text (not links) and table borders
-color_accent_lines=#B48266
-
-# Color used when manually drawing attention to an element with the class "attention"
-color_attention=#A19DFF
-
 style_standard_pad=40px
 style_page_width=800px
 

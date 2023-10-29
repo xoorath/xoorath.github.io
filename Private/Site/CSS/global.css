@@ -1,27 +1,111 @@
+/*
+Parts of this theme are build using Obsidian Obsidianite under the following license::after
+MIT License
+
+Copyright (c) 2020 Guo Xiang
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+
 {include:CSS/Unlucky.css}
 {include:CSS/SourceSerif4.css}
 {include:CSS/Cascadia.css}
 {include:CSS/Passageway.css}
 
+:root {
+    --background-primary: #100e17;
+    --background-primary-alt: #0d0b12;
+    --background-secondary: #191621;
+    --background-secondary-alt: #0d0b12;
+    --text-normal: #bebebe;
+    --text-accent: #0fb6d6;
+    --text-sub-accent: #f4569d;
+    --text-dim: #45aaff;
+    --text-faint: #7aa2f7;
+    --text-title-h1: var(--text-accent);
+    --text-title-h2: #cbdbe5;
+    --text-title-h3: #cbdbe5;
+    --text-title-h4: #cbdbe5;
+    --text-title-h5: #cbdbe5;
+    --text-link: #b4b4b4;
+    --text-a: #6bcafb;
+    --text-a-hover: #6bcafb;
+    --text-mark: #263d92;
+    --code-background: var(--background-secondary);
+    --interactive-accent: rgba(14, 210, 247, 0.5);
+    --interactive-accent-hover: rgba(14, 210, 247, 0.8);
+    --interactive-before: #5e6565;
+    --blockquote-border: #4aa8fb;
+    --tag-background: rgba(14, 210, 247, 0.15);
+    --interactive-accent-rgb: #3dd7fb;
+    --font-family-editor: 'Rubik';
+    --font-family-preview: 'Rubik';
+    --bg-sub-accent-55: rgba(244, 86, 157, 0.55);
+    --bg-accent-55: rgba(14, 210, 247, 0.55);
+    --bg-accent-25: rgba(14, 210, 247, 0.25);
+    --text-highlight-bg: rgba(244, 86, 157, 0.25);
+    --background-modifier-border: rgba(14, 210, 247, 0.05);
+    --table-border-color: rgb(14, 210, 247, 0.5);
+    --test-color: rgb(122, 162, 247);
+    --editor-border-color: #101014;
+
+    --default-font: 'Rubik', 'Glow Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
+
+    --default-font-size: 18px;
+
+    /** Main text font weight **/
+    --body-font-weight: 450;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--default-font);
+  font-weight: 600;
+}
+
 html {
+
+
     filter: brightness(85%);
 
-    /*background-color: {$color_bg};*/
+    /*background-color: var(--background-primary);*/
     background: 
     linear-gradient(
           to right, 
-          {$color_bg_outside} 0px, /* Starting point */
-          {$color_bg_outside} calc(50% - ({$style_page_width} / 2) - {$style_bg_gradient_distance}), /* End black point */
-          {$color_bg} calc(50% - ({$style_page_width} / 2)), /* Starting red point */
-          {$color_bg} calc(50% + ({$style_page_width} / 2)), /* End red point */
-          {$color_bg_outside} calc(50% + ({$style_page_width} / 2) + {$style_bg_gradient_distance}), /* Starting black point */
-          {$color_bg_outside} 100% /* End black point */
+          var(--background-secondary) 0px, /* Starting point */
+          var(--background-secondary) calc(50% - (({$style_page_width} + 6em) / 2) - 3em), /* End black point */
+          var(--background-primary) calc(50% - (({$style_page_width} + 6em) / 2)), /* Starting red point */
+          var(--background-primary) calc(50% + (({$style_page_width} + 6em) / 2)), /* End red point */
+          var(--background-secondary) calc(50% + (({$style_page_width} + 6em) / 2) + 3em), /* Starting black point */
+          var(--background-secondary) 100% /* End black point */
         );
 }
 
 body {
     
-    color: {$color_text};
+    color: var(--text-normal);
     padding: {$style_standard_pad} {$style_standard_pad} {$style_standard_pad} {$style_standard_pad};
     font-family: 'Roboto', sans-serif;
     height: 100vh;
@@ -29,36 +113,50 @@ body {
     max-width:{$style_page_width};
 }
 
+/*********** misc ***********/
+u {
+    text-decoration-thickness: 2pt;
+    text-decoration-color: var(--text-mark);
+}
+/*********** /misc ***********/
+
+/*********** titles ***********/
 h1, h2, h3, subtitle {
     /*font-family: 'Source Serif', serif;*/
     margin: 0 0 0 0;
 }
-
+h1 { color: var(--text-title-h1); }
+h2 { color: var(--text-title-h2); }
+h3 { color: var(--text-title-h3); }
+h4 { color: var(--text-title-h4); }
+h5 { color: var(--text-title-h5); }
+h6 { color: var(--text-title-h6); }
 subtitle {
-    /*
-        Very slightly larger than default
-        This is to prevent fuzzy lettering on horizontal lines on firefox
-    */
+    /*Very slightly larger than default. This is to prevent fuzzy lettering on horizontal lines on firefox*/
     font-size: 12.5pt;
 }
+/*********** /titles ***********/
 
+/*********** table ***********/
+table {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-collapse: collapse;
+}
 thead tr td {
     font-weight: bold;
 }
-
-table.tbl-fit, .tbl-fit th, .tbl-fit td {
-    border: 1px solid {$color_accent_lines};
+td, th {
+    border: 1px solid var(--table-border-color);
 }
-
-.tbl-fit td {
-    padding: 0.5em;
+td {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
+/*********** /table ***********/
 
-u {
-    text-decoration-thickness: 2pt;
-    text-decoration-color: {$color_accent_lines};
-}
 
+/*********** code ***********/
 pre {
     font-family: 'Cascadia Code' ,'Courier New', Courier, monospace;
     
@@ -71,23 +169,17 @@ pre {
 
     white-space: pre-wrap;
 }
-
 pre .symbol {
     color:rgb(158, 210, 255);
 }
-
 pre .literal {
     color: pink;
 }
-
 pre.terminal {
     background-color: rgba(0, 0, 0, 0.4);
     border-color: #464646;
 }
-
-ul {
-    list-style: square url(../Graphics/bullet.svg) inside;
-}
+/*********** /code ***********/
 
 blockquote {
     padding: 1em;
@@ -107,7 +199,7 @@ date {
     padding-top: 0.2em;
     padding-bottom: 0.2em;
     background-color: #464646;
-    color: {$color_text};
+    color: var(--text-normal);
     border-radius: 5px;
     margin: 1em;
     margin-left: 0;
@@ -118,8 +210,8 @@ date {
     padding: 0.5em;
     padding-top: 0.2em;
     padding-bottom: 0.2em;
-    background-color: {$color_text};
-    color: {$color_bg};
+    background-color: var(--text-normal);
+    color: var(--background-primary);
     border-radius: 5px;
     margin: 1em;
     margin-left: 0;
@@ -138,11 +230,5 @@ date {
 
 .attention {
     font-weight: bold;
-    color: {$color_attention} !important;
+    color: var(--text-accent) !important;
 }
-
-a.attention:before, a.attention:after {
-    font-weight: bold;
-    color: {$color_attention} !important;
-}
-  

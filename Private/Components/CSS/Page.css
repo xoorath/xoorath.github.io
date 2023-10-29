@@ -10,10 +10,6 @@
 #page-inner {
 }
 
-#page h1, #page h2, #page h3 {
-    color: {$color_page_title};
-}
-
 #page b, #page i, #page strong, #page em {
-    color: {$color_text_em};
+    color: var(--text-dim);
 }

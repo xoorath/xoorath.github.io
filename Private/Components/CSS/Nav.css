@@ -3,7 +3,7 @@
     font-family: 'Passageway', Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 50pt;
     margin-top: -0.2em;
-    color: {$color_site_title};
+    color: var(--text-title-h1);
     display: block;
     text-transform: lowercase;
 }
@@ -21,6 +21,5 @@
 }
 
 #nav h1, #nav h2, #nav h3, #nav subtitle {
-    color: {$color_site_title};
     margin: 0 0 0 0;
 }
